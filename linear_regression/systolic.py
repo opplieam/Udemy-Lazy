@@ -23,6 +23,7 @@ plt.show()
 
 X2_only = df[['X2', 'ones']]
 X3_only = df[['X3', 'ones']]
+Exclude_noise = df[['X2', 'X3']]
 
 
 def get_r2(x, y):
@@ -38,3 +39,4 @@ def get_r2(x, y):
 print("R2 for X2 only", get_r2(X2_only, Y))
 print("R2 for X3 only", get_r2(X3_only, Y))
 print("R2 for both", get_r2(X, Y))
+print("R2 for both exclude noise", get_r2(Exclude_noise, Y))
