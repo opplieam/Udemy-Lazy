@@ -21,3 +21,9 @@ y_hat = a * x + b
 plt.scatter(x, y)
 plt.plot(x, y_hat)
 plt.show()
+
+# calculate r2
+d1 = y - y_hat
+d2 = y - y.mean()
+r2 = 1 - (d1.dot(d1) / d2.dot(d2))
+print('R2:', r2)
