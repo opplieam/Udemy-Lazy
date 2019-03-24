@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 df = pd.read_csv('./data/data_2d.csv', header=None)
 X = df[[0, 1]].values
