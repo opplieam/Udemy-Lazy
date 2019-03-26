@@ -36,12 +36,14 @@ def cross_entropy(T, Y):
 
 
 learning_rate = 0.1
-w = 0
+l2 = 0.1
 for i in range(100):
     if i % 10 == 0:
         print(cross_entropy(T, Y))
 
-    w += learning_rate * Xb.T.dot(T - Y)
-    Y = sigmoid(Xb.dot(w))
+    # L2 penalty for weight
+    W += learning_rate * (Xb.T.dot(T - Y) - l2*W)
+    Y = sigmoid(Xb.dot(W))
 
-print("Final w:", w)
+
+print("Final w:", W)
