@@ -35,7 +35,7 @@ for line in open('./data/robert_frost.txt'):
                 add2dict(second_word, t_1, t)
             else:
                 t_2 = tokens[i-2]
-                add2dict(transitions, (t_2, t_1), t)\
+                add2dict(transitions, (t_2, t_1), t)
 
 
 # normalize the distributions
