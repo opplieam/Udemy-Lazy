@@ -4,7 +4,7 @@ import pandas as pd
 
 def get_data(limit=None):
     print("Reading in and transforming data...")
-    df = pd.read_csv('./data/train.csv')
+    df = pd.read_csv('../mnist_data/train.csv')
     data = df.values
     np.random.shuffle(data)
     X = data[:, 1:] / 255.0 # data is from 0..255
